@@ -43,7 +43,7 @@ SUBPAK_Z=$5
 DEST_Z=$6
 
 
-for tile_pair in `geoconv I $TOP_Z $TOP_X $TOP_Y $TILE_Z`
+for tile_pair in `rsgeotools-conv I $TOP_Z $TOP_X $TOP_Y $TILE_Z`
 do
 
 	TP=$(echo $tile_pair | tr "_" " ")

@@ -63,7 +63,7 @@ rm -f $LOG_FILE
 DEFAULT_DIR=`pwd`
 
 
-for tile_pair in `geoconv I $TOP_Z $TOP_X $TOP_Y $TILE_Z_PARENT`
+for tile_pair in `rsgeotools-conv I $TOP_Z $TOP_X $TOP_Y $TILE_Z_PARENT`
 do
 
 	current_number=$(expr $current_number + 1)
@@ -72,7 +72,7 @@ do
 
 	echo "--- #$current_number (z $TILE_Z_PARENT) ($tile_pair) (single thread = $RVT_SINGLE_THREAD) ---"
 
-	subtile_pairs=(`geoconv i $TILE_Z_PARENT $TP $TILE_Z`)
+	subtile_pairs=(`rsgeotools-conv i $TILE_Z_PARENT $TP $TILE_Z`)
 
 	t0_tp=$(echo ${subtile_pairs[0]} | tr "_" " ")
 	t1_tp=$(echo ${subtile_pairs[1]} | tr "_" " ")

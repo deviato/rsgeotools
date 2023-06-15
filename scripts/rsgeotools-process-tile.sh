@@ -84,7 +84,7 @@ rm -r t10_*
 tar -x -f $RVT_SHP_ARCHIVE_DIR/ocean/ocean${TOP_Z}_${TOP_X}_${TOP_Y}.tar.gz
 
 
-for tile_pair in `geoconv I $TOP_Z $TOP_X $TOP_Y $PROCESS_Z`
+for tile_pair in `rsgeotools-conv I $TOP_Z $TOP_X $TOP_Y $PROCESS_Z`
 do
 
 	TP=$(echo $tile_pair | tr "_" " ");
