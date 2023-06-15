@@ -27,7 +27,7 @@ rsgeotools-conv: before_rsgeotools
 	$(CXX) $(CFLAGS) $(INC) $(SRC_DIR)/conv/conv.cpp -o $(OUTPUT_BIN_DIR)/rsgeotools-conv
 
 rsgeotools-csv2rvtdata: before_rsgeotools  
-	$(CXX) $(CFLAGS) $(INC) -I$(SRC_DIR)/csv2rvtdata/ -lgeos_c $(SRC_DIR)/csv2rvtdata/csv.c $(SRC_DIR)/csv2rvtdata/csv2rvtdata.cpp -o $(OUTPUT_BIN_DIR)/rsgeotools-csv2rvtdata
+	$(CXX) $(CFLAGS) $(INC) -I$(SRC_DIR)/csv2rvtdata/ $(SRC_DIR)/csv2rvtdata/csv.c $(SRC_DIR)/csv2rvtdata/csv2rvtdata.cpp -lgeos_c -o $(OUTPUT_BIN_DIR)/rsgeotools-csv2rvtdata
 
 rsgeotools-tiffcompose: before_rsgeotools  
 	$(CXX) $(CFLAGS) $(INC) $(SRC_DIR)/tiffcompose/tiffcompose.cpp -ltiff -o $(OUTPUT_BIN_DIR)/rsgeotools-tiffcompose
